@@ -1,12 +1,8 @@
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-
 public class Main {
-
 
     public static void main(String[] args) throws InterruptedException, NullPointerException {
         String selectDrink;
@@ -15,7 +11,6 @@ public class Main {
         double drinkCost;
         double change;
         boolean on = true;
-
 
         HashMap<String, Double> drinks = new HashMap<>();
         drinks.put("Latte", 3.00);
@@ -36,8 +31,8 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         Scanner input2 = new Scanner(System.in);
-        while (on) {
 
+        while (on) {
             System.out.println("Welcome to coffee machine Mx2.\nPlease select your drink:");
 
             for (String str : ourDrinks) {
@@ -62,7 +57,6 @@ public class Main {
                     System.out.println("Nope... we don't have this drink: " + selectDrink);
             }
 
-
             drinkCost = drinks.get(selectDrink);
             System.out.println("Your drink cost: " + drinkCost + " Eur");
             System.out.println("Please insert coin:");
@@ -81,7 +75,6 @@ public class Main {
             System.out.println(selectDrink + " is preparing...");
 
             for (int i = 0; i < 30; i++) {
-
                 System.out.print("*");
                 Thread.sleep(100);
             }
@@ -89,9 +82,7 @@ public class Main {
 
             System.out.println("\nFinished, please take your drink.");
             for (int i = 0; i < 35; i++) {
-
                 System.out.print("_");
-
             }
 
             Thread.sleep(1000);
