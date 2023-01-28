@@ -18,11 +18,11 @@ public class Main {
         drinks.put("White Coffee", 2.00);
         drinks.put("Tea", 1.20);
 
-        ArrayList<String> ourDrinks = new ArrayList<>();
-        ourDrinks.add("Latte - 3.00 Eur");
-        ourDrinks.add("Black Coffee - 1.50 Eur");
-        ourDrinks.add("White Coffee - 2.00 Eur");
-        ourDrinks.add("Tea - 1.20 Eur");
+//        ArrayList<String> ourDrinks = new ArrayList<>();
+//        ourDrinks.add("Latte - 3.00 Eur");
+//        ourDrinks.add("Black Coffee - 1.50 Eur");
+//        ourDrinks.add("White Coffee - 2.00 Eur");
+//        ourDrinks.add("Tea - 1.20 Eur");
 
         ArrayList<String> tea = new ArrayList<>();
         tea.add("Green");
@@ -35,9 +35,12 @@ public class Main {
         while (on) {
             System.out.println("Welcome to coffee machine Mx2.\nPlease select your drink:");
 
-            for (String str : ourDrinks) {
-                System.out.println((str));
+            for(String i : drinks.keySet()){
+                System.out.println(i +" "+   drinks.get(i)+" Eur");
             }
+//            for (String str : ourDrinks) {
+//                System.out.println((str));
+//            }
             selectDrink = input.nextLine();
 
             switch (selectDrink) {
