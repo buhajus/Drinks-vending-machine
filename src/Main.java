@@ -1,3 +1,4 @@
+import java.nio.channels.SelectableChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -35,14 +36,18 @@ public class Main {
         while (on) {
             System.out.println("Welcome to coffee machine Mx2.\nPlease select your drink:");
 
-            for(String i : drinks.keySet()){
-                System.out.println(i +" "+   drinks.get(i)+" Eur");
+            for (String i : drinks.keySet()) {
+                System.out.println(i + " " + drinks.get(i) + " Eur");
             }
-//            for (String str : ourDrinks) {
-//                System.out.println((str));
-//            }
+
             selectDrink = input.nextLine();
 
+            while(!drinks.containsKey(selectDrink)){
+                System.out.println("Nope... we don't have this drink: >> " + selectDrink +" << ");
+               // System.out.println(drinks.containsKey(selectDrink));
+                System.out.println("Please select your drink:");
+                selectDrink = input.nextLine();
+            }
             switch (selectDrink) {
                 case "Latte":
                 case "White Coffee":
