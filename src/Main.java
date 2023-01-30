@@ -13,6 +13,7 @@ public class Main {
         boolean on = true;
         int count = 0;
 
+
         HashMap<String, Double> drinks = new HashMap<>();
         drinks.put("Latte", 3.00);
         drinks.put("Black Coffee", 1.50);
@@ -46,6 +47,7 @@ public class Main {
             }
 
             if (selectDrink.equals("Tea")) {
+
                 System.out.println("Our tea selection: ");
 
                 for (String str : tea) {
@@ -58,7 +60,7 @@ public class Main {
 
                 }
                 System.out.println("\nPlease choose your tea:");
-                typeOfTea = input2.nextLine();
+                typeOfTea = input.nextLine();
                 System.out.println("You selected:\t" + typeOfTea.toLowerCase() + " tea");
             }
 
